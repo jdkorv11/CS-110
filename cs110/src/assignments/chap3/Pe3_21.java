@@ -22,22 +22,20 @@ public class Pe3_21 {
 		if (badInput) {
 			System.exit(1);
 		}
-	}
-	static void checkDayMonthCombo(int month, int day) {
-		// makes sure the month and day combination exists (always allows Feb. 29th)
+		// make sure the month and day combination exists (always allows Feb. 29th)
 			// months are numbered 1-12
 		switch (month) {
 		case 2:
 			if (day > 29) {
 				System.out.println("\nInvalid month and day combination");
-				System.exit(1);
+				System.exit(1); 
 			}
 		case 4:
 		case 6:
 		case 9:
 		case 11:
 			if (day > 30) {
-				System.out.println("\nInvalid month and day combination");
+				System.out.println("Invalid month and day combination");
 				System.exit(1);
 			}
 		}
@@ -105,7 +103,6 @@ public class Pe3_21 {
 		
 		// make sure inputs are valid
 		checkInputs(month, dayOfMonth);
-		checkDayMonthCombo(month, dayOfMonth);
 		
 		//make adjustment for January and February being months 13 and 14 of previous year
 		switch (month){
