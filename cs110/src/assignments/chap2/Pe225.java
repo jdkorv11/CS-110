@@ -39,7 +39,7 @@ public class Pe225 {
 	totalTax = fedTax + stateTax;
 	netPay = grossPay - totalTax;
 	
-	System.out.println("\nEmployee nane: " + name);
+	System.out.println("\nEmployee name: " + name);
 	System.out.println("Hours Worked: " + hoursWorked);
 	System.out.println("Pay Rate: $" + hourlyWage);
 	System.out.println("Gross Pay: $" + grossPay);
