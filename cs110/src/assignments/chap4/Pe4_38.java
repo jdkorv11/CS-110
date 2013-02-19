@@ -14,7 +14,7 @@ public class Pe4_38 {
 		char[] tempHex;
 		int hexNum;
 		char hexDigit;
-		String hexidecimal = "";
+		String hexadecimal = "";
 		
 		Scanner input = new Scanner(System.in);
 		System.out.print("Enter a positive integer: ");
@@ -57,10 +57,11 @@ public class Pe4_38 {
 			}
 			
 		}
+		//put the hexadecimal characters in a string to print
 		for (int i = 0; i < hex.length; i ++) {
-			hexidecimal = hexidecimal + hex[i];
+			hexadecimal = hexadecimal + hex[i];
 		}
-		System.out.print("The hexidecimal equivalent of the number " + number + " is " + hexidecimal);
+		System.out.print("The hexadecimal equivalent of the number " + number + " is " + hexadecimal);
 		
 	}
 
