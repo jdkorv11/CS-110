@@ -10,10 +10,8 @@ public class Pe4_38 {
 	public static void main(String[] args) {
 		long number;
 		long workingNumber;
-		char[] hex = {};
-		char[] tempHex;
 		int hexNum;
-		char hexDigit;
+		String hexDigit = "";
 		String hexadecimal = "";
 		
 		Scanner input = new Scanner(System.in);
@@ -27,42 +25,30 @@ public class Pe4_38 {
 			hexNum = (int) workingNumber % 16;
 			switch (hexNum) {
 			case 10:
-				hexDigit = 'A';
+				hexDigit = "A";
 				break;
 			case 11:
-				hexDigit = 'B';
+				hexDigit = "B";
 				break;
 			case 12:
-				hexDigit = 'C';
+				hexDigit = "C";
 				break;
 			case 13:
-				hexDigit = 'D';
+				hexDigit = "D";
 				break;
 			case 14:
-				hexDigit = 'E';
+				hexDigit = "E";
 				break;
 			case 15:
-				hexDigit = 'F';
+				hexDigit = "F";
 				break;
 			default:
-				hexDigit =Character.forDigit(hexNum,10);
+				hexDigit = Integer.toString(hexNum);
 			}
 			workingNumber = workingNumber / 16;
-			//store the hex digit in the hex string 
-			tempHex = hex;
-			hex = new char[hex.length + 1]; 
-			hex[0] = hexDigit;
-			for (int i = 0; i < tempHex.length; i ++) {
-				hex[i + 1] = tempHex[i];
-			}
-			
-		}
-		//put the hexadecimal characters in a string to print
-		for (int i = 0; i < hex.length; i ++) {
-			hexadecimal = hexadecimal + hex[i];
-		}
-		System.out.print("The hexadecimal equivalent of the number " + number + " is " + hexadecimal);
-		
+			hexadecimal = hexDigit + hexadecimal;
+			}			
+			System.out.print("The hexadecimal equivalent of the number " + number + " is " + hexadecimal);		
+		}		
 	}
 
-}
