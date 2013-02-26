@@ -42,7 +42,7 @@ public class quizProblem {
 		if (isValid(side1, side2, side3)) {
 			area = area(side1, side2, side3);
 			System.out.println("The area is " + area);
-		}
+		} 
 		else {
 			System.out.println("Invalid input. Does not form a real triangle.");
 		}
