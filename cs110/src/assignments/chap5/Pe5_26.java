@@ -33,7 +33,7 @@ public class Pe5_26 {
 	}
 	public static boolean isPalindrome(long number) {
 		String num = Long.toString(number);
-		for(int front = 0, back = (num.length()-1); front < back; front ++, back --) {
+		for (int front = 0, back = (num.length() - 1); front < back; front++, back--) {
 			if (num.charAt(front) != num.charAt(back))
 				return false;
 		}
