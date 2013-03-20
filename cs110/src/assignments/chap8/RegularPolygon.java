@@ -1,6 +1,6 @@
 package assignments.chap8;
 
-public class RegularPolygon {
+public class RegularPolygon { 
 
 	private final int DEFAULT_NUMBER_OF_SIDES = 3;
 	private int n = DEFAULT_NUMBER_OF_SIDES;
