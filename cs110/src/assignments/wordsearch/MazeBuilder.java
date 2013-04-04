@@ -97,7 +97,7 @@ public class MazeBuilder {
 		System.out.println("\n\"" + word + "\" " + wv.toString() + "\n");
 		for (int i = 0; i < dimensions[0]; i++) {
 			for (int j = 0; j < dimensions[1]; j++) {
-				System.out.print(displayArray[i][j]);
+				System.out.print(displayArray[i][j] + " ");
 			}
 			System.out.println();
 		}
