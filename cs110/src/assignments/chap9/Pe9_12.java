@@ -24,11 +24,19 @@ public class Pe9_12 {
 	}
 
 	public static boolean isAnagram(String s1, String s2) {
+		// detects whether two strings are anagrams ignoring spaces and
+		// punctuation
 		StringBuilder sb1 = new StringBuilder(s1.toLowerCase());
 		StringBuilder sb2 = new StringBuilder(s2.toLowerCase());
-		sb1.trimToSize();
-		sb2.trimToSize();
-		if(sb1.length() != sb2.length())
+		for (int i = 0; i < sb1.length(); i++) {
+			if (!Character.isLetterOrDigit(sb1.charAt(i)))
+				sb1.deleteCharAt(i);
+		}
+		for (int i = 0; i < sb2.length(); i++) {
+			if (!Character.isLetterOrDigit(sb2.charAt(i)))
+				sb2.deleteCharAt(i);
+		}
+		if (sb1.length() != sb2.length())
 			return false;
 		for (int i = 0; i < sb1.length(); i++) {
 			Character temp = sb1.charAt(i);
