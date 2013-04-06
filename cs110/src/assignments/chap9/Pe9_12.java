@@ -11,9 +11,9 @@ public class Pe9_12 {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		System.out.print("Enter the first string: ");
-		String s1 = input.next();
+		String s1 = input.nextLine();
 		System.out.print("Enter the second string: ");
-		String s2 = input.next();
+		String s2 = input.nextLine();
 		input.close();
 
 		if (isAnagram(s1, s2))
