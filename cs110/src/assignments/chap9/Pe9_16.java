@@ -17,7 +17,7 @@ public class Pe9_16 { // test program for MyString1 class
 		myString1Printer(s.toLowerCase());
 		System.out.println("\nequals: " + s.equals(new MyString1(c)));
 		System.out.print("value of 2: ");
-		myString1Printer(MyString1.valueOf(2));
+		myString1Printer(MyString1.valueOf(12314));
 
 	}
 
