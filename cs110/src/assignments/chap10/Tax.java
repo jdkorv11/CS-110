@@ -9,6 +9,7 @@ public class Tax {
 
 	private int filingStatus;
 	// brackets stores the minimum amount taxed at each rate
+	// minimum for first bracket is $1
 	private int[][] brackets = new int[4][5];
 	// all rates stored as a percentage
 	private double[] rates = new double[5];
@@ -34,20 +35,20 @@ public class Tax {
 			double bracketTax = getBracketTax(bracketMax,
 					brackets[filingStatus][bracketLevel], rates[bracketLevel]);
 			tax += bracketTax;
-			bracketMax = brackets[filingStatus][bracketLevel];
+			bracketMax = brackets[filingStatus][bracketLevel] - 1;
 			bracketLevel--;
 			i = bracketLevel;
 		}
 		return tax;
 	}
-	
+
 	public void setTFilingStatus(int status) {
-		if(status < 0 || status > 3)
+		if (status < 0 || status > 3)
 			error("setTaxStatus");
 		else
 			filingStatus = status;
 	}
-	
+
 	public void setTaxableIncome(double amt) {
 		taxableIncome = amt;
 	}
@@ -72,7 +73,7 @@ public class Tax {
 		else
 			error("setRates");
 	}
-	
+
 	public double getTaxableIncome() {
 		return taxableIncome;
 	}
@@ -93,7 +94,7 @@ public class Tax {
 	public double[] getRates() {
 		return rates;
 	}
-	
+
 	public int getFilingStatus() {
 		return filingStatus;
 	}
@@ -111,7 +112,7 @@ public class Tax {
 	}
 
 	private double getBracketTax(double amt, int bracketAmt, double rate) {
-		double levelTax = (amt - bracketAmt) * (rate / 100);
+		double levelTax = (amt - bracketAmt - 1) * (rate / 100);
 		return levelTax;
 	}
 }

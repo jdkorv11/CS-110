@@ -6,14 +6,14 @@ public class Pe10_8 {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		int[][] bracket2001 = { { 0, 8351, 33951, 82251, 171551, 372951 },
-				{ 0, 16701, 67901, 137051, 208851, 372951 },
-				{ 0, 8351, 33951, 68526, 104426, 186476 },
-				{ 0, 11951, 45501, 117451, 190201, 372951 } };
-		int[][] bracket2009 = { { 0, 27051, 65551, 136751, 297351 },
-				{ 0, 45201, 109251, 166501, 297351 },
-				{ 0, 22601, 54626, 83251, 148676 },
-				{ 0, 36251, 93651, 151651, 297351 } };
+		int[][] bracket2001 = { { 1, 8351, 33951, 82251, 171551, 372951 },
+				{ 1, 16701, 67901, 137051, 208851, 372951 },
+				{ 1, 8351, 33951, 68526, 104426, 186476 },
+				{ 1, 11951, 45501, 117451, 190201, 372951 } };
+		int[][] bracket2009 = { { 1, 27051, 65551, 136751, 297351 },
+				{ 1, 45201, 109251, 166501, 297351 },
+				{ 1, 22601, 54626, 83251, 148676 },
+				{ 1, 36251, 93651, 151651, 297351 } };
 		double[] rates2001 = { 10, 15, 25, 28, 33, 35 };
 		double[] rates2009 = { 15, 27.5, 30.5, 35.5, 39.1 };
 
@@ -26,9 +26,9 @@ public class Pe10_8 {
 				Tax.MARRIED_JOINTLY_OR_QUALIFYING_WIDOWER,
 				Tax.HEAD_OF_HOUSEHOLD };
 		System.out.println("2001 taxes");
-		for(int status: taxStatus) {
+		for (int status : taxStatus) {
 			String fileStatus;
-			switch(status) {
+			switch (status) {
 			default:
 				fileStatus = "Single";
 				break;
@@ -44,15 +44,15 @@ public class Pe10_8 {
 			}
 			System.out.println("\n" + fileStatus);
 			tax2001.setTFilingStatus(status);
-			for(int amt: taxableIncome) {
+			for (int amt : taxableIncome) {
 				tax2001.setTaxableIncome(amt);
 				System.out.println("$" + amt + ": Tax = " + tax2001.getTax());
 			}
 		}
 		System.out.println("\n2009 taxes");
-		for(int status: taxStatus) {
+		for (int status : taxStatus) {
 			String fileStatus;
-			switch(status) {
+			switch (status) {
 			default:
 				fileStatus = "Single";
 				break;
@@ -68,7 +68,7 @@ public class Pe10_8 {
 			}
 			System.out.println("\n" + fileStatus);
 			tax2009.setTFilingStatus(status);
-			for(int amt: taxableIncome) {
+			for (int amt : taxableIncome) {
 				tax2009.setTaxableIncome(amt);
 				System.out.println("$" + amt + ": Tax = " + tax2009.getTax());
 			}
